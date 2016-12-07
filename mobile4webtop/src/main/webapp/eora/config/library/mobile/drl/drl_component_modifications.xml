@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version="1.0">
+	<scope>
+
+		<component modifies="drl:wdk/config/drl_component.xml">
+			<!--  Insert new mobile page -->
+			<insert path="pages">
+				<mobile>/eora/library/mobile/drl/mobile_drl.jsp</mobile>
+			</insert>
+			
+			<!--  Replace standard wdk class -->
+			<replace path="class">
+				<class>com.eora.dctm.mobile4webtop.drl.DRLComponent</class>
+			</replace>
+			
+			<!--  Replace standard wdk class -->
+			<replace path="nlsbundle">
+				<nlsbundle>com.eora.webcomponent.library.mobile.drl.DRLComponentNlsProp</nlsbundle>
+			</replace>
+			
+			<!-- Insert custom config xml elements -->
+			<insert>
+				<use-download-servlet>false</use-download-servlet>
+			</insert>
+			
+		</component>
+		
+	</scope>
+</config>

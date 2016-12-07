@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version="1.0">
+	<scope type="dm_folder">
+		<!-- docbaseattributelist definition -->
+		<attributelist id="mobile_view_attrlist" extends="mobile_view_attrlist:eora/config/library/mobile/attributes/mobile_view_docbaseattributelist.xml">
+
+			<expanded_category_id>dm_info</expanded_category_id>
+			
+			<pseudo_attributes/>
+
+			<category id="dm_info">
+				<name>
+					<nlsid>MSG_INFO</nlsid>
+				</name>
+				<attributes>
+					<attribute name="object_name"/>
+					<attribute name="title"/>
+					<attribute name="subject"/>
+					<attribute name="keywords"/>
+					<attribute name="authors"/>
+				</attributes>
+			</category>
+			<category id="dm_system">
+				<name>
+					<nlsid>MSG_CAT_SYSTEM</nlsid>
+				</name>
+				<attributes>
+					<attribute name="r_object_type" />
+					<attribute name="r_creation_date" />
+					<attribute name="r_creator_name" />
+					<attribute name="r_modify_date" />
+					<attribute name="r_modifier" />
+					<attribute name="owner_name" />
+					<attribute name="acl_name" />
+				</attributes>
+			</category>		
+		</attributelist>
+	</scope>
+</config>
+

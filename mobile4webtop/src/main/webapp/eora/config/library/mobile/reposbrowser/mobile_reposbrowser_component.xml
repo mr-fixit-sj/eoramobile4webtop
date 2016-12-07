@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!--    Mobile Repository Browser Component				                   -->
+<!--    Enables a mobile friendly view for accessing content in docbase    -->
+<!--   																	   -->
+<!--   	Currently contains functionality :								   -->
+<!-- 	* Browsing folders												   -->
+<!-- 	* View object properties										   -->
+<!-- 	* View object locations											   -->
+<!-- 	* View object versions											   -->
+<!-- 	* View,add or remove subscriptions 							   	   -->
+<!-- 	* Mobile friendly DRL page	   								   	   -->
+<!-- 	* View content via ACS or wdk5 downloadservlet link				   -->
+<!-- 	* Send DRL links with mailto:... link							   -->
+<!-- 	* Search														   -->
+<!-- 	* Define object metadata display configuration via xml or  		   -->
+<!--      docbase display configurations	   							   -->
+<!-- 	* Add custom attribute value formatters							   -->
+<!-- 	* Import Content (beta)											   -->
+<!-- 	* Edit metadata, full support for existing value assistance	(beta) -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version="1.0">
+	<scope>
+		<component id="mobile_reposbrowser">
+		
+			<!-- Define this component as directly addressable -->
+			<url-addressable-enabled/>
+			
+			<params>
+				<param name="objectId" required="false" />
+				<param name="initFolderId" required="false" />
+			</params>
+		
+			<pages>
+				<start>/eora/library/mobile/reposbrowser/mobile_reposbrowser.jsp</start>
+			</pages>
+		
+			<class>com.eora.dctm.mobile4webtop.reposbrowser.MobileReposBrowser</class>
+			<nlsbundle>com.eora.webcomponent.library.mobile.reposbrowser.MobileReposBrowserNlsProp</nlsbundle>
+			
+			<!-- Default header logo -->
+			<header-logo-url>/eora/include/mobile/reposbrowser/images/header_logo.svg</header-logo-url>
+			
+			<!-- Define max result count for search queries -->
+			<max-results-count>200</max-results-count>
+			
+			<!-- Use wdk5-download servlet for generated content links, of generate acs url if false -->
+			<use-download-servlet>false</use-download-servlet>
+			
+			<!-- Enable import and edit metadata functionality -->
+			<enable-addedit-content>false</enable-addedit-content>
+			
+			<!-- Define default attributes to be used as headers/info for each page -->
+			<page-display-config>
+				<foldercontentspage>
+					<objectheader>object_name</objectheader>
+					<objectinfo>title</objectinfo>
+				</foldercontentspage>
+				<locationspage>
+					<objectheader>object_name</objectheader>
+					<objectinfo>title</objectinfo>
+				</locationspage>
+				<subscriptionspage>
+					<objectheader>object_name</objectheader>
+					<objectinfo>title</objectinfo>
+				</subscriptionspage>
+				<searchresultspage>
+					<objectheader>object_name</objectheader>
+					<objectinfo>title</objectinfo>
+				</searchresultspage>
+			</page-display-config>
+			
+			<!-- Enable custom attribute value formatters implementing the com.eora.dctm.mobile4webtop.reposbrowser.properties.IAttributeValueFormatter interface -->
+			<attribute-value-formatters/>
+
+		</component>
+	</scope>
+</config>

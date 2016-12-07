@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config>
+	<scope>
+		<component id="mobile_httpimportcontainer" extends="httpimportcontainer:webcomponent/config/library/contenttransfer/importcontent/httpimportcontainer_component.xml">
+			<!--  Insert new mobile page -->
+			<pages>
+				<containerstart>/eora/library/mobile/container/m_combocontainer.jsp</containerstart>
+				<fileselection>/eora/library/mobile/importcontent/m_httpfileselection.jsp</fileselection>
+			</pages>
+
+			<class>com.eora.dctm.mobile4webtop.importcontent.MobileHttpImportContainer</class>
+			
+		</component>
+	</scope>
+</config>

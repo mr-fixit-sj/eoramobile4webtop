@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config>
+	<scope type="dm_sysobject">
+		<action id="mobilesubscribe" extends="subscribe:webcomponent/config/actions/dm_sysobject_actions.xml">
+			<execution class="com.eora.dctm.mobile4webtop.actions.MobileSubscribeAction"/>
+		</action>
+		<action id="mobileunsubscribe" extends="unsubscribe:webcomponent/config/actions/dm_sysobject_actions.xml">
+			<execution class="com.eora.dctm.mobile4webtop.actions.MobileUnSubscribeAction"/>
+		</action>
+	</scope>
+</config>

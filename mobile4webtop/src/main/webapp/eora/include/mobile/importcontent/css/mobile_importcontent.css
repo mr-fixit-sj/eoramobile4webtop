@@ -1,0 +1,67 @@
+/*
+ * 
+ * @author S.Jonckheere
+ * @since 1.0.0
+ * 
+ */
+
+
+#ui-datepicker-div
+{
+    display: none;
+}
+.pagelabel {
+	font-weight: bold;
+}                         
+.ui-link, .defaultDocbaseAttributeStyle {
+	font-size: 0.938em !important;
+}
+
+.ui-checkbox input {
+	position: static !important;
+	margin: -0px 0 0 !important; 
+}
+
+input {
+	font-size: 0.938em !important;
+}
+
+.requiredFieldAsterisk, .validatorMessageStyle {
+	color: #E71A1A;
+	font-size: 0.938em;
+}
+
+.clearDateButton {
+	float: right;
+	margin-top: 5px !important;
+	margin-right: 5px !important;
+	box-shadow: none !important;
+	border-width: 0px !important;
+}
+
+.props-label{
+	font-size: 0.938em !important;
+	font-weight: bold !important;
+}
+
+.props-value{
+	font-size: 0.938em !important;
+	white-space: normal !important;
+}
+
+.footerButton {
+	width: 100% !important;
+	font-size: 0.938em !important;
+}
+
+.footerBlockA {
+	padding-left: 1em !important;
+}
+
+.footerBlockB {
+	padding-right: 1em !important;
+}
+
+.defaultDropdownListStyle {
+	font-size: 0.938em !important;
+}

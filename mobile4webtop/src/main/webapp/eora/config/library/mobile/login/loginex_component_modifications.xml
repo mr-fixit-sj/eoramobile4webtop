@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version="1.0">
+	<scope>
+
+		<component modifies="login:wdk/config/loginex_component.xml">
+			<!--  Insert new mobile page -->
+			<insert path="pages">
+				<mobile>/eora/library/mobile/login/mobile_login.jsp</mobile>
+			</insert>
+			
+			<!--  Replace standard wdk class  -->
+			<replace path="class">
+				<class>com.eora.dctm.mobile4webtop.login.Login</class>
+			</replace>
+			
+		</component>
+		
+	</scope>
+</config>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version="1.0">
+	<scope>
+		<attributelist id="mobile_import_attrlist" extends="mobile_edit_attrlist:/eora/config/library/mobile/attributes/mobile_edit_docbaseattributelist.xml">
+
+			<!-- Info -->
+			<category id="dm_info">
+				<name>
+					<nlsid>MSG_INFO</nlsid>
+				</name>
+				<attributes>
+					<attribute name="title" />
+					<attribute name="subject" />
+					<attribute name="keywords" />
+					<attribute name="authors" />
+				</attributes>
+			</category>
+			<category id="dm_system">
+				<name>
+					<nlsid>MSG_CAT_SYSTEM</nlsid>
+				</name>
+				<attributes>
+					<attribute name="log_entry" />
+				</attributes>
+			</category>
+		</attributelist>
+
+	</scope>
+</config>
+

@@ -1,0 +1,24 @@
+/*
+ * 
+ * @author S.Jonckheere
+ * @since 1.0.0
+ * 
+ */
+
+
+/* Sets style for icon with no background: just icon only */
+.drl-header-icon {
+	box-shadow: none !important;
+	background: transparent !important;
+	border-width: 0px !important;	
+}
+
+.drl-props-label{
+	font-size: 12px !important;
+	font-weight: bold !important;
+}
+
+.drl-props-value{
+	font-size: 12px !important;
+	white-space: normal !important;
+}

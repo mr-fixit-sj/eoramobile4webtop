@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config>
+	<scope>
+		<component id="mobile_httpimport" extends="httpimport:webcomponent/config/library/contenttransfer/importcontent/httpimport_component.xml">
+			<pages>
+				<start>/eora/library/mobile/importcontent/m_importContent.jsp</start>
+			</pages>
+
+			<!--  Replace standard wdk class  -->
+			<class>com.eora.dctm.mobile4webtop.importcontent.MobileImportContent</class>
+			
+		</component>
+	</scope>
+</config>

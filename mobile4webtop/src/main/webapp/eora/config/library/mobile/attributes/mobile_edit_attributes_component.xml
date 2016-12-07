@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config>
+	<scope type="dm_sysobject">
+		<component id="mobile_edit_attributes" extends="attributes:webcomponent/config/library/attributes/attributes_dm_sysobject_component.xml">
+			<pages>
+				<start>/eora/library/mobile/attributes/mobile_edit_attributes.jsp</start>
+			</pages>
+
+			<class>com.eora.dctm.mobile4webtop.attributes.MobileEditAttributes</class>
+			<nlsbundle>com.eora.webcomponent.library.mobile.attributes.MobileEditAttributesNlsProp</nlsbundle>
+
+			<showpagesastabs>false</showpagesastabs>
+
+		</component>
+	</scope>
+</config>

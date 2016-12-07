@@ -1,0 +1,150 @@
+/*
+ * 
+ * @author S.Jonckheere
+ * @since 1.0.0
+ * 
+ */
+                         
+
+
+
+/* Sets listitem count format */
+.ui-li-count {
+	font-size: 10px !important;	
+}
+
+/*
+	Mobile Folderbrowser styles
+*/
+
+/* Sets style for icon with no background: just icon only */
+.folderbrowser-header-icon{
+	box-shadow: none !important;
+	background: transparent !important;
+	border-width: 0px !important;
+}
+
+
+.pagelabel{
+	font-weight: bold;
+}
+
+.contentList{
+	margin-top: 10px !important;
+}
+
+/* Sets font size of filter text input field */
+
+.ui-input-search input {
+	font-size: 0.938em !important;
+}
+
+/* Default font size */
+.search-labels, .search-result-count {
+	font-size: 0.938em !important;
+}
+.ui-checkbox input {
+	width: 0.938em !important;
+	height: 0.938em !important;
+}
+
+
+.search-form-body {
+	background-color: #f6f6f6 !important;	
+	top: 5px !important;
+}
+
+.search-form-message-text {
+	/*Red text */
+	color: #E71A1A !important;
+}
+
+.search-result-count {
+	font-weight: bold !important;
+}
+
+.searchresults-summary {
+	font-size: 0.800em !important;
+	white-space: normal !important;
+}
+
+.searchresults-termshighlight{
+	background: #FDFC9F !important;
+}
+
+
+.folcontents-objectHeader, .versions-objectHeader, .locations-objectHeader, .subscriptions-objectHeader, .searchresults-objectHeader {
+	font-size: 0.875em !important;
+	font-weight: bold !important;
+}
+
+.folcontents-objectInfo, .versions-objectInfo, .locations-objectInfo, .subscriptions-objectInfo, .searchresults-objectInfo {
+	font-size: 0.800em !important;
+	white-space: normal !important;
+}
+
+.folcontents-objectInfoFooter{
+	font-size: 0.689em !important;
+}
+
+.folcontents-pathlabel {
+	font-size: 10px !important;
+}
+
+.props-header-info{
+	margin-bottom: 30px;	
+}
+
+.props-header-icon{
+	float: left;
+	margin-right: 10px;
+}
+
+.props-header-lockIconOverlay {
+	border: 0px;
+	height: 16px;
+	width: 16px;
+	position: relative;
+	top: 3px;
+	margin-left: -9px;
+}
+
+
+.props-header-label{
+	font-size: 0.938em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow:hidden;
+}
+
+.props-label{
+	font-size: 0.938em !important;
+	font-weight: bold !important;
+}
+
+.props-value{
+	font-size: 0.938em !important;
+	white-space: normal !important;
+}
+
+.props-buttons{
+	font-size: 12px !important;
+}
+/* height of listitem paddings */
+.ui-li-static-props{
+	padding: .5em 1em !important;	
+}
+
+#pageloader-div {
+   background: url(../../../jquery/mobile/1.4.5/images/ajax-loader.gif) no-repeat center center;
+   height: 100px;
+   width: 100px;
+   opacity: .18;
+   filter: Alpha(Opacity=18);
+   display: block;
+   position: fixed;
+   z-index: 1000;
+   left: 50%;
+   top: 50%;
+   margin: -25px 0 0 -25px;
+}

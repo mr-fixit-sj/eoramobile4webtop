@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version="1.0">
+	<scope>
+
+		<component modifies="prompt:wdk/config/prompt_component.xml">
+			<!--  Insert new mobile page -->
+			<insert path="pages">
+				<mobile>/eora/library/mobile/prompt/mobile_prompt.jsp</mobile>
+			</insert>
+			
+			<!--  Replace standard wdk class  -->
+			<replace path="class">
+				<class>com.eora.dctm.mobile4webtop.prompt.Prompt</class>
+			</replace>
+			
+		</component>
+		
+	</scope>
+</config>

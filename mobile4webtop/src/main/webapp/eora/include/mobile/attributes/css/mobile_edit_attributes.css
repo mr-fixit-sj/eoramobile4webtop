@@ -1,0 +1,91 @@
+/*
+ * 
+ * @author S.Jonckheere
+ * @since 1.0.0
+ * 
+ */
+
+
+#ui-datepicker-div
+{
+    display: none;
+}
+.pagelabel {
+	font-weight: bold;
+}                         
+.props-header-info{
+	margin-bottom: 30px;	
+}
+
+.props-header-icon{
+	float: left;
+	margin-right: 10px;
+}
+
+.props-header-label{
+	font-size: 0.938em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow:hidden;
+}
+
+.props-label{
+	font-size: 0.938em !important;
+	font-weight: bold !important;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.props-value{
+	font-size: 0.938em !important;
+	white-space: normal !important;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.ui-link, .defaultDocbaseAttributeStyle {
+	font-size: 0.938em !important;
+}
+
+.ui-checkbox input {
+	position: static !important;
+	margin: -0px 0 0 !important; 
+}
+
+input {
+	font-size: 0.938em !important;
+}
+
+.requiredFieldAsterisk, .validatorMessageStyle {
+	color: #E71A1A;
+	font-size: 0.938em;
+}
+
+.clearDateButton {
+	float: right;
+	margin-top: 5px !important;
+	margin-right: 5px !important;
+	box-shadow: none !important;
+	border-width: 0px !important;
+}
+
+.lockIconOverlay {
+	border: 0px;
+	height: 16px;
+	width: 16px;
+	position: relative;
+	top: 3px;
+	margin-left: -9px;
+}
+
+.footerButton {
+	width: 100% !important;
+	font-size: 0.938em !important;
+}
+
+.footerBlock {
+	padding-left: 2px !important;
+	padding-right: 2px !important;
+}

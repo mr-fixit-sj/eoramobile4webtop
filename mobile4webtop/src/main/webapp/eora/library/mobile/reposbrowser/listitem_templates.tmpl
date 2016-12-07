@@ -1,0 +1,181 @@
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Confidential Property of Eora B.V.                             	   -->
+<!-- (c) Copyright Eora BV 2014.                                           -->
+<!-- All Rights reserved.                                                  -->
+<!-- May not be used without prior written agreement.                      -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!--    Eora Mobile Webtop version :  @@RELEASE_VERSION@@                  -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<!-- 
+	Folderbrowser listitem templates
+-->
+<script id="listItemTmpl" type="text/x-jquery-tmpl">
+	{%if valuesMap.isFolder == true %}
+		{%tmpl $("#folderItemTmpl") %}
+	{%else%}
+		{%tmpl $("#objectItemTmpl") %}
+	{%/if%}
+</script>
+
+<script id="folderItemTmpl" type="text/x-jquery-tmpl">
+	<li>
+		<a href="#foldercontentspage" onclick="getFolderContentsServer( '{%= valuesMap.objectId %}',getCurrentFolderPathIds() )">
+			<img class='ui-li-icon' src='{%= valuesMap.iconUrl %}' width='16' height='16'/>
+			<h2 class="folcontents-objectHeader">{%= valuesMap.objectHeader %}</h2>
+        	<p class="folcontents-objectInfo">{%= valuesMap.objectInfo %}</p>
+			{%if valuesMap.linkCount != 0 %}
+				<span class="ui-li-count">{%= valuesMap.linkCount %}</span>
+			{%/if%}
+		</a>
+		<a data-icon="info" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}', true, true)"></a>
+    </li>
+</script>
+
+<script id="objectItemTmpl" type="text/x-jquery-tmpl">
+	<li>
+		<a href="#propertiespage" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}', false, true)">
+			<img class='ui-li-icon' src='{%= valuesMap.iconUrl %}' width='16' height='16'/>
+			<h2 class="folcontents-objectHeader">{%= valuesMap.objectHeader %}</h2>
+        	<p class="folcontents-objectInfo">{%= valuesMap.objectInfo %}</p>
+			{%if valuesMap.lockOwner != "" %}
+				<p class="folcontents-objectInfoFooter"><img src='<%=Form.makeUrl(request, "/wdk/theme/documentum/icons/indicator/i_locked_by_another_16.gif")%>' width="12" height="12"/>{%= valuesMap.contentSize %} - <%=form.getString("MSG_MODIFIED_DATE")%>: {%= valuesMap.modifiedOn %}</p>
+			{%else%}
+				<p class="folcontents-objectInfoFooter">{%= valuesMap.contentSize %} - <%=form.getString("MSG_MODIFIED_DATE")%>: {%= valuesMap.modifiedOn %}</p>
+			{%/if%}
+		</a>
+		<a href="#" data-icon="info" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}',false, true )"></a>
+    </li>
+</script>
+
+
+<!-- 
+	Search Results listitem templates
+-->
+
+<script id="searchListItemTmpl" type="text/x-jquery-tmpl">
+	{%if valuesMap.isFolder == true %}
+		{%tmpl $("#searchFolderItemTmpl") %}
+	{%else%}
+		{%tmpl $("#searchObjectItemTmpl") %}
+	{%/if%}
+</script>
+
+<script id="searchFolderItemTmpl" type="text/x-jquery-tmpl">
+	<li>
+		<a href="#foldercontentspage" data-transition="slide" onclick="getFolderContentsServer( '{%= valuesMap.objectId %}',null )">
+			<img class='ui-li-icon' src='{%= valuesMap.iconUrl %}' width='16' height='16'/>
+			<h2 class="searchresults-objectHeader">{%html valuesMap.objectHeader %}</h2>
+        	<p class="searchresults-objectInfo">{%= valuesMap.objectInfo %}</p>
+			{%if valuesMap.linkCount != 0 %}
+				<span class="ui-li-count">{%= valuesMap.linkCount %}</span>
+			{%/if%}
+		</a>
+		<a href="#" data-icon="info" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}', true,true)"></a>
+    </li>
+</script>
+
+<script id="searchObjectItemTmpl" type="text/x-jquery-tmpl">
+	<li>
+		<a href="#" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}', false, true)">
+			<img class='ui-li-icon' src='{%= valuesMap.iconUrl %}' width='16' height='16'/>
+			<h2 class="searchresults-objectName">{%html valuesMap.objectHeader %}</h2>
+			{%if valuesMap.summary !== undefined && valuesMap.summary != null && valuesMap.summary != "" %}
+        		<p class="searchresults-summary">{%html valuesMap.summary %}</p>
+			{%else%}
+				<p class="searchresults-objectInfo">{%= valuesMap.objectInfo %}</p>
+			{%/if%}
+			{%if valuesMap.lockOwner != "" %}
+				<p class="searchresults-objectInfo"><img src='<%=Form.makeUrl(request, "/wdk/theme/documentum/icons/indicator/i_locked_by_another_16.gif")%>' width="12" height="12"/>{%= valuesMap.contentSize %} - <%=form.getString("MSG_MODIFIED_DATE")%>: {%= valuesMap.modifiedOn %}</p>
+			{%else%}
+				<p class="searchresults-objectInfo">{%= valuesMap.contentSize %} - <%=form.getString("MSG_MODIFIED_DATE")%>: {%= valuesMap.modifiedOn %}</p>
+			{%/if%}
+		</a>
+		<a href="#" data-icon="info" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}', false,true)"></a>
+    </li>
+</script>
+
+<!-- 
+	Subscription listitem templates
+-->
+<script id="subscriptionListItemTmpl" type="text/x-jquery-tmpl">
+	{%if valuesMap.isFolder == true %}
+		{%tmpl $("#subscriptionFolderItemTmpl") %}
+	{%else%}
+		{%tmpl $("#subscriptionObjectItemTmpl") %}
+	{%/if%}
+</script>
+
+<script id="subscriptionFolderItemTmpl" type="text/x-jquery-tmpl">
+	<li>
+		<a href="#foldercontentspage" data-transition="slide" onclick="getFolderContentsServer( '{%= valuesMap.objectId %}',null )">
+			<img class='ui-li-icon' src='{%= valuesMap.iconUrl %}' width='16' height='16'/>
+			<h2 class="subscriptions-objectHeader">{%= valuesMap.objectHeader %}</h2>
+        	<p class="subscriptions-objectInfo">{%= valuesMap.objectInfo %}</p>
+			{%if valuesMap.linkCount != 0 %}
+				<span class="ui-li-count">{%= valuesMap.linkCount %}</span>
+			{%/if%}
+		</a>
+		<a href="#" data-icon="info" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}', true,true)"></a>
+    </li>
+</script>
+
+<script id="subscriptionObjectItemTmpl" type="text/x-jquery-tmpl">
+	<li>
+		<a href="#" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}', false,true)">
+			<img class='ui-li-icon' src='{%= valuesMap.iconUrl %}' width='16' height='16'/>
+			<h2 class="subscriptions-objectHeader">{%= valuesMap.objectHeader %}</h2>
+        	<p class="subscriptions-objectInfo">{%= valuesMap.objectInfo %}</p>
+			{%if valuesMap.lockOwner != "" %}
+				<p class="subscriptions-objectInfo"><img src='<%=Form.makeUrl(request, "/wdk/theme/documentum/icons/indicator/i_locked_by_another_16.gif")%>' width="12" height="12"/>{%= valuesMap.contentSize %} - <%=form.getString("MSG_MODIFIED_DATE")%>: {%= valuesMap.modifiedOn %}</p>
+			{%else%}
+				<p class="subscriptions-objectInfo">{%= valuesMap.contentSize %} - <%=form.getString("MSG_MODIFIED_DATE")%>: {%= valuesMap.modifiedOn %}</p>
+			{%/if%}
+		</a>
+		<a href="#" data-icon="info" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}', false,true)"></a>
+    </li>
+</script>
+
+<!--  
+	Locations list
+ -->
+
+<script id="locationsFolderItemTmpl" type="text/x-jquery-tmpl">
+	<li data-icon='false'>
+		<a href="#foldercontentspage" data-transition="slide" onclick="getFolderContentsServer( '{%= valuesMap.objectId %}',null )">
+			<img class='ui-li-icon' src='{%= valuesMap.iconUrl %}' width='16' height='16'/>
+			<h2 class="locations-objectHeader">{%html valuesMap.objectHeader %}</h2>
+			<p class="locations-objectInfo">{%= valuesMap.objectInfo %}</p>
+        	<p class="locations-objectInfo">{%= valuesMap.folderPath %}</p>
+			{%if valuesMap.linkCount != 0 %}
+				<span class="ui-li-count">{%= valuesMap.linkCount %}</span>
+			{%/if%}
+		</a>
+		<a href="#" data-icon="info" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}',true )"></a>    
+    </li>
+</script>
+
+<script id="versionsObjectItemTmpl" type="text/x-jquery-tmpl">
+	<li>
+		<a href="#" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}', false,false)">
+			<img class='ui-li-icon' src='{%= valuesMap.iconUrl %}' width='16' height='16'/>
+			<h2 class="versions-objectHeader"><%=form.getString("MSG_VERSION_LABEL")%>: {%= valuesMap.versionLabels %}</h2>
+			{%if valuesMap.versionDescription != "" %}
+				<p class="versions-objectInfo">{%= valuesMap.versionDescription %}</p>
+			{%/if%}
+			{%if valuesMap.lockOwner != "" %}
+				<p class="versions-objectInfo"><img src='<%=Form.makeUrl(request, "/wdk/theme/documentum/icons/indicator/i_locked_by_another_16.gif")%>' width="12" height="12"/>{%= valuesMap.contentSize %} - <%=form.getString("MSG_MODIFIED_DATE")%>: {%= valuesMap.modifiedOn %}</p>
+			{%else%}
+				<p class="versions-objectInfo">{%= valuesMap.contentSize %} - <%=form.getString("MSG_MODIFIED_DATE")%>: {%= valuesMap.modifiedOn %}</p>
+			{%/if%}
+		</a>
+		<a href="#" data-icon="info" data-transition="slide" onclick="onClickShowObjectProperties('{%= valuesMap.objectId %}',false )"></a>    
+	</li>
+</script>
+

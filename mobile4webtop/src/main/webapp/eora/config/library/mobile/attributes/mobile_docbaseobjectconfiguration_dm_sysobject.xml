@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version="1.0">
+	<scope type="dm_sysobject">
+		<docbaseobjectconfiguration id="mobile_docbaseobjectconfig" extends="attributes:/webcomponent/config/library/docbaseobjectconfiguration_dm_sysobject.xml">
+			<names>
+				<attribute name="object_name">
+					<valuetagclass>com.eora.dctm.mobile4webtop.attributes.MobileRequiredDocbaseAttributeValueTag</valuetagclass>
+				</attribute>
+			</names>
+
+			<types>
+				<attribute type="string" repeatingonly="false" singleonly="true">
+					<valuetagclass>com.eora.dctm.mobile4webtop.attributes.MobileSingleAttributeValueTag</valuetagclass>
+					<editcomponent>docbasesingleattribute</editcomponent>
+				</attribute>
+				<attribute type="integer" repeatingonly="false" singleonly="true">
+					<valuetagclass>com.eora.dctm.mobile4webtop.attributes.MobileSingleAttributeValueTag</valuetagclass>
+					<editcomponent>docbasesingleattribute</editcomponent>
+				</attribute>
+				<attribute type="double" repeatingonly="false" singleonly="true">
+					<valuetagclass>com.eora.dctm.mobile4webtop.attributes.MobileSingleAttributeValueTag</valuetagclass>
+					<editcomponent>docbasesingleattribute</editcomponent>
+				</attribute>
+				<attribute type="id" repeatingonly="false" singleonly="true">
+					<valuetagclass>com.eora.dctm.mobile4webtop.attributes.MobileSingleAttributeValueTag</valuetagclass>
+					<editcomponent>docbasesingleattribute</editcomponent>
+				</attribute>
+			</types>
+		</docbaseobjectconfiguration>
+	</scope>
+</config>

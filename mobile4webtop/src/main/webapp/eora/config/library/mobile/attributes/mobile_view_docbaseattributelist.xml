@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version="1.0">
+	<scope>
+		<attributelist id="mobile_view_attrlist" extends="attributes:webcomponent/config/library/attributes_docbaseattributelist.xml">
+			<expanded_category_id>dm_info</expanded_category_id>
+
+			<data_dictionary_population>
+				<enable>false</enable>
+				<ddscopes>
+					<ddscope name="application">mobile_webtop_view_attributes</ddscope>
+				</ddscopes>
+	            <ignore_attributes/>
+            	<readonly_attributes/>
+			</data_dictionary_population>
+
+			<!-- Nls Bundle for category names -->
+			<nlsbundle>com.eora.webcomponent.library.mobile.attributes.MobileDocbaseAttributeListNlsProp</nlsbundle>	
+
+			<!-- Info -->
+			<category id="dm_info">
+				<name>
+					<nlsid>MSG_INFO</nlsid>
+				</name>
+				<attributes>
+					<attribute name="object_name" />
+					<attribute name="title" />
+					<attribute name="subject" />
+					<attribute name="keywords" />
+					<attribute name="authors" />
+					<attribute name="r_full_content_size" />
+					<attribute name="a_content_type" />
+				</attributes>
+			</category>
+			<category id="dm_system">
+				<name>
+					<nlsid>MSG_CAT_SYSTEM</nlsid>
+				</name>
+				<attributes>
+					<attribute name="r_object_type" />
+					<attribute name="r_version_label" />
+					<attribute name="log_entry" />
+					<attribute name="r_creation_date" />
+					<attribute name="r_creator_name" />
+					<attribute name="r_modify_date" />
+					<attribute name="r_modifier" />
+					<attribute name="owner_name" />
+					<attribute name="r_lock_date" />
+					<attribute name="r_lock_owner" />
+					<attribute name="acl_name" />
+				</attributes>
+			</category>
+		</attributelist>
+	</scope>
+</config>
+

@@ -1,0 +1,31 @@
+/*
+ * 
+ * @author S.Jonckheere
+ * @since 1.0.0
+ * 
+ */
+                         
+
+
+
+.login-ddl {
+	font-size: 14px !important;
+}
+
+.login-redWarningText {
+	color: #E71A1A !important;
+}
+
+
+.login-button {
+	height: 40px !important;
+	background-color: #f6f6f6 !important;
+}
+
+
+/* Sets style for icon with no background: just icon only */
+.login-header-icon{
+	box-shadow: none !important;
+	background: transparent !important;
+	border-width: 0px !important;
+}

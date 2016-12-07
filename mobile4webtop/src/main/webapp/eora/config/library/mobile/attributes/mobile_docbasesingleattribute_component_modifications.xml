@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version="1.0">
+	<scope>
+		<component modifies="docbasesingleattribute:wdk/config/docbasesingleattribute_component.xml">
+			<!--  Insert new mobile page -->
+			<insert path="pages">
+				<mobile>/eora/library/mobile/attributes/mobile_singleattribute.jsp</mobile>
+			</insert>
+			
+			<!--  Replace standard wdk class  -->
+			<replace path="class">
+				<class>com.eora.dctm.mobile4webtop.attributes.MobileDocbaseSingleAttribute</class>
+			</replace>
+			
+		</component>
+		
+	</scope>
+</config>

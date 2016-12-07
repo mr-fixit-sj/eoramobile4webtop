@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version="1.0">
+	<scope>
+
+		<component modifies="main:webtop/config/mainex_component.xml">
+			
+			<!--  Replace standard wdk class  -->
+			<replace path="class">
+				<class>com.eora.dctm.mobile4webtop.main.MainEx</class>
+			</replace>
+			
+		</component>
+		
+	</scope>
+</config>

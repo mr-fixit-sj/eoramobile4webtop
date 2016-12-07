@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config>
+	<scope type="dm_sysobject">
+		<action modifies="drlview:webtop/config/dm_sysobject_actions.xml">
+			<replace path="preconditions">
+				<preconditions>
+					<precondition class="com.eora.dctm.mobile4webtop.drl.DRLSysObjectViewAction" />
+				</preconditions>
+			</replace>
+		</action>
+	</scope>
+</config>

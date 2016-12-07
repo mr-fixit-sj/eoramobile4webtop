@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Eora Mobile4Webtop                                                	   -->
+<!--                                                                       -->
+<!-- @author S.Jonckheere                             	  				   -->
+<!-- @since 1.0.0                                           			   -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config>
+	<scope type="dm_folder">
+		<action id="mobileimport" extends="import:webcomponent/config/actions/dm_folder_actions.xml">
+			<execution class="com.documentum.web.formext.action.LaunchComponentWithPermitCheck">
+            	<permit>folder_link_permit</permit>
+				<component>mobile_httpimport</component>
+				<container>mobile_httpimportcontainer</container>
+			</execution>
+ 		</action>
+	</scope>
+</config>
